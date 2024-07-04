@@ -1,89 +1,153 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+*{
+    scroll-behavior: smooth;
 }
-
-.nav {
-    color: azure;
-    background-color: rgba(0, 0, 0, 0.8);
+.wrapper {
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-image: url("./cricketground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
+  background-attachment: fixed;
 }
-
-.nav-item {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    padding: 10px 20px;
-}
-
-.nav-item img {
-    width: 80px;
-    border-radius: 50%;
-}
-
-.left-nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font: 30px Arial, Helvetica, sans-serif;
-    padding-top: 10px;
-}
-
-.contact {
-    width: 180px;
-    height: 80px;
-    padding-left: 10px;
-    margin-top: 10px;
-    line-height: 1.5;
-}
-
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+  width: 1200px;
+  padding: 2%;
+  margin: 0 auto; /*div container move to the centre  */
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  font-family: "poppins";
+  color: aliceblue;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+.navbar:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: 0.2s ease-in;
+  color: black;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+.nav-left img {
+  width: 70px;
+  border-radius: 50%;
+}
+.nav-left-text {
+  font-size: 30px;
+}
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+.fa-solid {
+  padding: 15px;
+  width: 20px;
+}
+.nav-right a {
+  text-decoration: none;
+  color: white;
+}
+.nav-right a:hover {
+  color: red;
+  transition: 0.3s ease-in;
+}
+
+.wrapper2 {
+  background-image: url("./cricketground.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
+  background-attachment: fixed;
+}
+.container2 {
+  width: 1200px;
+  margin: 0 auto; /*div container move to the centre  */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .para {
-    height: 400px;
-    width: auto;
-    font-size: 20px;
-    margin: 30px 50px;
-    padding: 50px;
-    border: 1px solid #999;
-    overflow: hidden;
+  border: 1px solid rgb(0,0,0);
+  color: rgb(239, 237, 237);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+}
+.formBox {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  color: aliceblue;
+  font-family: "poppins";
+  font-size: 19px;
+  padding-bottom: 10px;
 }
 
-.formBox {
-    border: 1px solid black;
-    width: 500px;
-    padding: 30px;
-    display: grid;
-    gap: 15px;
+.form-group {
+  display: contents;
 }
 
 .data {
-    padding: 5px;
-    font-size: 18px;
+  padding: 10px;
+  font-size: 19px;
 }
 
+#players,
+.btn {
+  padding: 10px;
+  width: 100%;
+  font-size: 19px;
+}
+.sub {
+  grid-column: span 2;
+}
+#subscribe {
+  width: 18px;
+}
+#subscribe2 {
+  font-size: 15px;
+}
 #button {
-    display: flex;
-    justify-content: space-between;
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
-    height: 35px;
-    width: 70px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 8px;
 }
 
-footer.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f1f1f1;
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  text-align: center;
+  background-color: rgb(249, 251, 252);
+  border: none;
+  border-top: 1px solid black;
 }
