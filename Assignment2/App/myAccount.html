@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./style2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>My Account</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <nav class="nav-bar">
+          <div class="nav-bar-top">
+            <div class="workspace">
+              <div class="workspace-logo">W</div>
+              <div class="workspace-text">Workspace</div>
+            </div>
+            <div class="nav-items">
+              <div class="nav-items-logo">
+                <i class="fa-solid fa-house"></i>
+              </div>
+              <div class="nav-items-text"><a href="../index.html">Home</a></div>
+            </div>
+            <div class="nav-items">
+              <div class="nav-items-logo">
+                <i class="fa-solid fa-users-line"></i>
+              </div>
+              <div class="nav-items-text">
+                <a href="./customer.html">Customers</a>
+              </div>
+            </div>
+            <div class="nav-items">
+              <div class="nav-items-logo">
+                <i class="fa-regular fa-address-card"></i>
+              </div>
+              <div class="nav-items-text">
+                <a href="./department.html">Departments</a>
+              </div>
+            </div>
+            <div class="nav-items">
+              <div class="nav-items-logo">
+                <i class="fa-solid fa-photo-film"></i>
+              </div>
+              <div class="nav-items-text"><a href="./media.html">Media</a></div>
+            </div>
+          </div>
+          <div class="nav-bar-bottom">
+            <div class="nav-items" id="nav-item-myAccount">
+              <div class="nav-items-logo"><i class="fa-solid fa-user"></i></div>
+              <div class="nav-items-text">
+                <a href="./myAccount.html">My Account</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="right-section">
+          <div class="heading">
+            <div class="searchbar">
+              <div class="searchbar-text">Search in Home</div>
+              <div class="searchbar-logo">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+          </div>
+          <div class="dataSection">
+            <div class="imageContainer">
+              <div class="card">
+                <img
+                  src="../images/icons8-user-96.png"
+                  alt="image preview"
+                  id="profile-pic"
+                />
+              </div>
+              <div class="uploadContainer">
+                <input
+                  type="file"
+                  id="uploadType"
+                  accept="image/*"
+                  style="display: none"
+                />
+                <img src="../images/icons8-edit-64.png" class="pencil" />
+              </div>
+            </div>
+            <div class="info">
+              <label>Name</label><br />
+              <input type="text" id="nameInput" value="Anil Sahu" readonly />
+              <img
+                src="../images/icons8-edit-64.png"
+                id="editPencil"
+              />
+            </div>
+            <div class="info">
+              <label>Email</label><br />
+              <input type="email" value="anilsahu9786@gmail.com" readonly />
+              <img
+                src="../images/icons8-edit-64.png"
+                id="editPencil"
+                class="emailEdit"
+              />
+            </div>
+            <div class="info">
+              <label>Phone Number</label><br />
+              <input type="number" value="8847812624" readonly />
+              <img
+                src="../images/icons8-edit-64.png"
+                id="editPencil"
+                class="numberEdit"
+              />
+            </div>
+            <div class="info">
+              <label>Date Of Birth</label><br />
+              <input type="date" value="2002-10-10" readonly />
+              <img
+                src="../images/icons8-edit-64.png"
+                id="editPencil"
+                class="dobEdit"
+              />
+            </div>
+            <div class="button">
+              <button id="save" class="buttonCard">Save</button>
+              <button id="cancel" class="buttonCard">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const profilePic = document.getElementById("profile-pic");
+      const inputFile = document.getElementById("uploadType");
+      // Trigger file input when the pencil image is clicked
+      pencil.onclick = () => {
+        inputFile.click();
+      };
+      // Update profile picture when a new file is selected
+      inputFile.onchange = () => {
+        if (inputFile.files && inputFile.files[0]) {
+          profilePic.src = URL.createObjectURL(inputFile.files[0]);
+        }
+      };
+
+      // Select the elements
+      const editPencil = document.getElementById("editPencil");
+      const nameInput = document.getElementById("nameInput");
+
+      // Add an event listener to the image
+      editPencil.addEventListener("click", () => {
+        // Make the input field editable
+        nameInput.readOnly = false;
+        // Focus the input field to make it easier for the user to start editing
+        nameInput.focus();
+      });
+    </script>
+  </body>
+</html>

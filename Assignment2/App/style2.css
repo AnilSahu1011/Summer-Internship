@@ -1,0 +1,126 @@
+@import url("https://fonts.google.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+.tableData{
+    margin: 5px 0 0 5px;
+    width: 100%;
+}
+table{
+    width: 100%;
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+}
+.blank{
+    color: white;
+}
+.btn {
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+    gap: 10px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+}
+.Arrow {
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 12px;
+    border-radius: 5px;
+}
+.mediaData{
+    margin: 5px 0 0 5px;
+    width: 100%;
+    border: 1px solid black;
+}
+.Heading{
+    width: 100%;
+    height: 45px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #cad1f8;
+    font-weight: bold;
+}
+.Content{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+.Content img{
+  width: 150px;
+  border-radius: 10px;
+}
+.Content video{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+}
+.dataSection{
+    margin-left: 2rem;
+}
+.imageContainer{
+    display: flex;
+    justify-content: start;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    border-radius: 10px;
+    align-items: end;
+    position: relative;
+    top: 2px;
+}
+.pencil{
+    position: relative;
+    margin-bottom:25px ;
+    width: 30px;
+}
+.card img{
+    width: 155px;
+    height: 155px;
+    margin: 10px 0 10px 0;
+    border-radius: 50%;
+    padding: 2px;
+}
+.dataSection{
+    padding-left: 10px;
+}
+#editPencil{
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+}
+.info img{
+    width: 30px;
+}
+.info input{
+    width: 350px;
+    height: 25px;
+}
+.info{
+    padding: 5px;
+}
+.button{
+    margin-left: 12rem;
+    margin-top: 3rem;
+    display: flex;
+    gap: 15px;
+}
+.buttonCard{
+    padding: 8px;
+    width: 85px;
+    border: 0.5px solid black;
+    border-radius: 7px;
+    font-weight: bold;
+}
+#save{
+    background-color: rgb(35, 243, 35);
+}
+#cancel{
+    background-color: red;
+}
