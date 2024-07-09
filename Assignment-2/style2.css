@@ -61,6 +61,9 @@ table, th, td{
     height: 200px;
     border-radius: 10px;
 }
+
+
+/* My Account */
 .dataSection{
     margin-left: 2rem;
 }
@@ -75,10 +78,16 @@ table, th, td{
     position: relative;
     top: 2px;
 }
-.pencil{
+#pencil{
+    cursor: pointer;
     position: relative;
     margin-bottom:25px ;
     width: 30px;
+}
+.pencil{
+    position: relative;
+    top: 10px;
+    cursor: pointer;
 }
 .card img{
     width: 155px;
@@ -112,6 +121,7 @@ table, th, td{
     gap: 15px;
 }
 .buttonCard{
+    cursor: pointer;
     padding: 8px;
     width: 85px;
     border: 0.5px solid black;

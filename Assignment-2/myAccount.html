@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./style2.css" />
     <link
       rel="stylesheet"
@@ -27,7 +27,7 @@
               <div class="nav-items-logo">
                 <i class="fa-solid fa-house"></i>
               </div>
-              <div class="nav-items-text"><a href="../index.html">Home</a></div>
+              <div class="nav-items-text"><a href="./index.html">Home</a></div>
             </div>
             <div class="nav-items">
               <div class="nav-items-logo">
@@ -74,54 +74,66 @@
             <div class="imageContainer">
               <div class="card">
                 <img
-                  src="../images/icons8-user-96.png"
+                  src="./icons8-user-96.png"
                   alt="image preview"
-                  id="profile-pic"
+                  id="profile"
                 />
               </div>
               <div class="uploadContainer">
                 <input
                   type="file"
-                  id="uploadType"
+                  id="inputType"
                   accept="image/*"
+                  multiple="false"
                   style="display: none"
                 />
-                <img src="../images/icons8-edit-64.png" class="pencil" />
+                <img src="./icons8-edit-64.png" id="pencil" />
               </div>
             </div>
             <div class="info">
               <label>Name</label><br />
-              <input type="text" id="nameInput" value="Anil Sahu" readonly />
+              <input type="text" id="name" value="Anil Sahu" readonly />
               <img
-                src="../images/icons8-edit-64.png"
-                id="editPencil"
+                src="./icons8-edit-64.png"
+                id="nameEditPencil"
+                class="pencil"
               />
             </div>
             <div class="info">
               <label>Email</label><br />
-              <input type="email" value="anilsahu9786@gmail.com" readonly />
+              <input
+                type="email"
+                id="mail"
+                value="anilsahu9786@gmail.com"
+                readonly
+              />
               <img
-                src="../images/icons8-edit-64.png"
-                id="editPencil"
-                class="emailEdit"
+                src="./icons8-edit-64.png"
+                class="pencil"
+                id="emailEditPencil"
               />
             </div>
             <div class="info">
               <label>Phone Number</label><br />
-              <input type="number" value="8847812624" readonly />
+              <input
+                type="number"
+                id="phoneNumber"
+                value="8847812624"
+                readonly
+              />
               <img
-                src="../images/icons8-edit-64.png"
-                id="editPencil"
-                class="numberEdit"
+                src="./icons8-edit-64.png"
+                class="pencil"
+                id="phoneNumberEditPencil"
               />
             </div>
             <div class="info">
               <label>Date Of Birth</label><br />
-              <input type="date" value="2002-10-10" readonly />
+              <input type="date" id="dob" value="2002-10-10" readonly />
               <img
-                src="../images/icons8-edit-64.png"
-                id="editPencil"
-                class="dobEdit"
+                src="./icons8-edit-64.png"
+                class="pencil"
+                id="dobEditPencil"
               />
             </div>
             <div class="button">
@@ -132,31 +144,6 @@
         </div>
       </div>
     </div>
-    <script>
-      const profilePic = document.getElementById("profile-pic");
-      const inputFile = document.getElementById("uploadType");
-      // Trigger file input when the pencil image is clicked
-      pencil.onclick = () => {
-        inputFile.click();
-      };
-      // Update profile picture when a new file is selected
-      inputFile.onchange = () => {
-        if (inputFile.files && inputFile.files[0]) {
-          profilePic.src = URL.createObjectURL(inputFile.files[0]);
-        }
-      };
-
-      // Select the elements
-      const editPencil = document.getElementById("editPencil");
-      const nameInput = document.getElementById("nameInput");
-
-      // Add an event listener to the image
-      editPencil.addEventListener("click", () => {
-        // Make the input field editable
-        nameInput.readOnly = false;
-        // Focus the input field to make it easier for the user to start editing
-        nameInput.focus();
-      });
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
